@@ -1,0 +1,38 @@
+body{background-color:#F5F2F5;margin:auto;color:#3b3b3b;font-family:tahoma;}
+.clear{clear:both;}
+a{text-decoration: none;cursor: pointer;}
+/* 
+Bright Red: #DE354C
+Deep Red: #932432
+Pure Purple: #3C1874
+Purple Tinged Grey: #283747
+Cloud: #F3F3F3
+*/
+.muted{color:#353c44}
+#header{}
+#footer{border-top:1px solid #3C1874;}
+#nav{border-top: 1px solid #283747;background-color:#283747;}
+#top{}
+#logo{float: left;color:#932432;text-transform: uppercase;}
+#logo img{height:60px;margin:10px 0px;}
+#toplink{float: right;line-height: 80px;}
+
+.container{width:90%;margin:auto;}
+
+#nav a{display:block;color:#fff;padding:10px 20px;float:left;}
+#nav a:hover{background-color: #DE354C;}
+#nav a.active{background-color: #932432;}
+#title{padding:40px 0px;}
+.featured{background-color:#e1e1e1;}
+.text-center{text-align:center;}
+.float-left{float:left}
+.float-right{float:right}
+.py-5{padding:40px 0px;}
+.py-2{padding:20px 0px;}
+.w-25{width:25%;}
+.w-75{width:75%;}
+
+.form-control{border:1px solid #3b3b3b;padding:6px;font-family:tahoma;margin:6px 0px;width:100%;}
+
+.btn{margin:10px 0px;background-color: #283747;color:#fff;padding:8px 15px;border:0px;}
+.btn:hover{background-color: #49617c; }

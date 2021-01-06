@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div id="header">
+            <div id="top" class="container">
+                <div id="logo">
+                    <img src="images/logo.png" alt="logo">
+                </div>
+                <div id="toplink">
+                    Login | Signup
+                </div>
+                <div class="clear"></div>
+            </div>
+            <div id="nav">
+                <div class="container">
+                    <a href="#" class="active">Home</a>
+                    <a href="#">About</a>
+                    <a href="contact.html">Contact</a>
+                    <a href="#">Services</a>
+                </div>
+                <div class="clear"></div>
+            </div>
+        </div>
+    </header>
+    <main>
+        <div class="container py-5" id="contact-form">
+            <h1>Contact Us</h1>
+            <div class="form w-25">
+                <form action="contact.html" onsubmit="return validate()" method="POST">
+                    <!-- csrf token -->
+                    Name<br/>
+                    <input class="form-control" type="text" name="name" id="name" required><br/>
+                    Mobile<br/>
+                    <input class="form-control" type="text" name="mobile" id="mobile"><br/>
+                    Email<br/>
+                    <input class="form-control" type="email" name="email" id="email" required><br/>
+                    Message<br/>
+                    <textarea class="form-control" name="message"></textarea>
+                    <br/>
+                    <input class="btn" type="submit" value="Submit">
+                </form>
+            </div>
+        </div>
+
+    </main>
+    <footer>
+        <div id="footer" class="text-center py-2 muted">
+            Copyright 2021 | About | Contact
+        </div>
+    </footer>
+    <script>
+        function validate(){
+            /* var nameVal = document.getElementById('name').value;
+            if(nameVal==''){
+                alert('Name must not be blank');
+                return false;
+            } */
+            var mobileVal = document.getElementById('mobile').value;
+            if(mobileVal=='' || isNaN(mobileVal)){
+                alert('mobile number must be digits only');
+                return false;
+            }
+        }
+    </script>
+</body>
+</html>

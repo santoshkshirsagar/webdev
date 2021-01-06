@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div id="header">
+            <div id="top" class="container">
+                <div id="logo">
+                    <img src="images/logo.png" alt="logo">
+                </div>
+                <div id="toplink">
+                    Login | Signup
+                </div>
+                <div class="clear"></div>
+            </div>
+            <div id="nav">
+                <div class="container">
+                    <a href="#" class="active">Home</a>
+                    <a href="#">About</a>
+                    <a href="contact.html">Contact</a>
+                    <a href="#">Services</a>
+                </div>
+                <div class="clear"></div>
+            </div>
+        </div>
+    </header>
+    <main>
+        <div id="title">
+            <h1 style="display:block;" id="textTitle" class="text-center">Website Layout<br/></h1>
+
+            <button onclick="changeText()">Change Text</button>
+            <button onclick="addText()">Add Text</button>
+            <button onclick="hideText()">Hide Text</button>
+            <button onclick="showText()">Show Text</button>
+            <button onclick="changeImg()">Change Image</button>
+            
+        </div>
+        <div class="container">
+            Input 1 <input type="text" id="input1">
+            Input 2 
+            <input type="text" id="input2"><br/>
+            Result
+            <span id="result"></span>
+            <button onclick="addition()">Addition</button>
+            <button onclick="sub()">Substraction</button>
+        </div>
+        <div class="featured">
+            <div class="container">
+                <div class="float-left py-5 w-25">
+                    <img id="img" style="width:200px;" src="images/dp.png">
+                </div>
+                <div class="float-right py-5 w-75">
+                    <h2>Welcome to Web Dev Course</h2>
+                    <p>HTML, PHP, Javascript etc</p>
+                </div>
+                <div class="clear"></div>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <div id="footer" class="text-center py-2 muted">
+            Copyright 2021 | About | Contact
+        </div>
+    </footer>
+    <script src="js/script.js"></script>
+</body>
+</html>
