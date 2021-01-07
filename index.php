@@ -1,35 +1,8 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <header>
-        <div id="header">
-            <div id="top" class="container">
-                <div id="logo">
-                    <img src="images/logo.png" alt="logo">
-                </div>
-                <div id="toplink">
-                    Login | Signup
-                </div>
-                <div class="clear"></div>
-            </div>
-            <div id="nav">
-                <div class="container">
-                    <a href="#" class="active">Home</a>
-                    <a href="#">About</a>
-                    <a href="contact.html">Contact</a>
-                    <a href="#">Services</a>
-                </div>
-                <div class="clear"></div>
-            </div>
-        </div>
-    </header>
-    <main>
+<?php
+$title="Home Page";
+include('header.php');
+?>
+<main>
         <div id="title">
             <h1 style="display:block;" id="textTitle" class="text-center">Website Layout<br/></h1>
 
@@ -62,11 +35,6 @@
             </div>
         </div>
     </main>
-    <footer>
-        <div id="footer" class="text-center py-2 muted">
-            Copyright 2021 | About | Contact
-        </div>
-    </footer>
-    <script src="js/script.js"></script>
-</body>
-</html>
+<?php
+include('footer.php');
+?>
