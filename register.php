@@ -2,7 +2,9 @@
 $title="Register";
 include('header.php');
 //print_r($_POST);
-echo $_POST['name'];
+if(isset($_POST['name'])){
+    print_r($_POST);
+}
 ?>
     <main>
         <div class="container py-5" id="contact-form">

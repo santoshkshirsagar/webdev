@@ -3,7 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title><?php echo $title; ?></title>
+    <title>
+    <?php if(isset($title))
+    { 
+        echo $title;
+    }else{ 
+        echo "web dev"; 
+    } 
+    ?></title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -14,8 +21,17 @@
                     <a href="/dev/"><img src="images/logo.png" alt="logo"></a>
                 </div>
                 <div id="toplink">
-                    <a href="login.php">Login</a> | 
-                    <a href="register.php">Signup</a>
+                <?php 
+                if(isset($_SESSSION['user'])){ 
+                    echo "user logged link";
+                }else{
+                    ?>
+                        <a href="login.php">Login</a> | 
+                        <a href="register.php">Signup</a>
+                    <?php
+                }
+                ?>
+                    
                 </div>
                 <div class="clear"></div>
             </div>

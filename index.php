@@ -6,6 +6,33 @@ include('header.php');
         <div id="title">
             <h1 style="display:block;" id="textTitle" class="text-center">Website Layout<br/></h1>
 
+<?php
+//data types
+$name="welcome to course";
+echo "<h1>".$name."</h1>";
+$count = 0;
+$limit=10;
+while($count<$limit){
+    //echo $count."<br/>";
+    if($count%2==0){
+        echo "<b>".$count."<br/>";
+        for ($i=1; $i <= $count; $i++) {
+            echo $i;
+        } 
+        echo "<br/>-------------------<br/>";
+    }
+    $count++;
+}
+/* for ($i=1; $i <= $count; $i++) { 
+    // code...
+    $tableFor=$i;
+    echo "<b>Table for ".$tableFor."</b><br/>";
+    for ($j=1; $j <= $count; $j++) { 
+        echo $tableFor*$j."<br/>";
+    }
+    echo "<hr/>";
+} */
+?>
             <button onclick="changeText()">Change Text</button>
             <button onclick="addText()">Add Text</button>
             <button onclick="hideText()">Hide Text</button>
