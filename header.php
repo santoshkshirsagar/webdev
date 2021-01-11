@@ -22,8 +22,8 @@
                 </div>
                 <div id="toplink">
                 <?php 
-                if(isset($_SESSSION['user'])){ 
-                    echo "user logged link";
+                if(isset($_SESSION['user'])){ 
+                    echo "<a href='account.php'>My Account</a>";
                 }else{
                     ?>
                         <a href="login.php">Login</a> | 
@@ -46,3 +46,9 @@
             </div>
         </div>
     </header>
+    <?php
+    function showText(){
+        echo "<h1>Test Heading</h1>";
+        echo "message";
+    }
+    ?>

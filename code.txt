@@ -1,0 +1,84 @@
+<?php
+echo "<h1>Indexed Array</h1>";
+$names = array("Pushpendra", "Sagar", "Amit","MonojTech");
+print_r($names);
+rsort($names);
+print_r($names);
+echo "<br/>";
+echo sizeof($names)."<br/>";
+for($i=0;$i<sizeof($names);$i++){
+    echo $names[$i]."<br/>"; 
+}
+echo "<hr/>";
+foreach($names as $name){
+    echo $name."<br/>";
+}
+
+echo "<h1>Associative Array</h1>";
+$assoArr = array("atudent" => "Pushpendra", "teacher" => "Sagar", "principal" => "Amit");
+print_r($assoArr);
+krsort($assoArr);
+print_r($assoArr);
+//echo $assoArr['principal'];
+echo "<br/>";
+foreach($assoArr as $key=>$val){
+    echo $key."-".$val."<br/>";
+}
+//
+echo "<hr/>";
+echo "<h1>Multidimensional Array</h1>";
+$multi = array(
+    array("css", "php", "html"),
+    array("mysql", "mssql", "mongodb"),
+    array("js", "jquery", "ajax")
+);
+print_r($multi);
+echo $multi[1][2];
+
+
+echo '<h1>heading\'</h1>';
+//function 
+function addition($val1, $val2){
+    $sum = $val1 + $val2;
+    echo "<h1>Sum of ".$val1."+".$val2."=".$sum."</h1>";
+}
+function addVal($val1, $val2){
+    $sum = $val1 + $val2;
+    return $sum;
+}
+//showText();
+//addition(3, 6);
+$sumCalc = addVal(23, 546);
+echo "<h1>".$sumCalc."</h1>";
+//data types
+/* $name="welcome to course";
+echo "<h1>".$name."</h1>";
+$count = 0;
+$limit=10;
+while($count<$limit){
+    //echo $count."<br/>";
+    if($count%2==0){
+        echo "<b>".$count."<br/>";
+        for ($i=1; $i <= $count; $i++) {
+            echo $i;
+        } 
+        echo "<br/>-------------------<br/>";
+    }
+    $count++;
+} */
+/* for ($i=1; $i <= $count; $i++) { 
+    // code...
+    $tableFor=$i;
+    echo "<b>Table for ".$tableFor."</b><br/>";
+    for ($j=1; $j <= $count; $j++) { 
+        echo $tableFor*$j."<br/>";
+    }
+    echo "<hr/>";
+} */
+?>
+            <button onclick="changeText()">Change Text</button>
+            <button onclick="addText()">Add Text</button>
+            <button onclick="hideText()">Hide Text</button>
+            <button onclick="showText()">Show Text</button>
+            <button onclick="changeImg()">Change Image</button>
+            

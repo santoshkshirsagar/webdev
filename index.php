@@ -1,46 +1,15 @@
 <?php
+session_start();
 $title="Home Page";
 include('header.php');
 ?>
 <main>
-        <div id="title">
+        <div id="title" >
             <h1 style="display:block;" id="textTitle" class="text-center">Website Layout<br/></h1>
 
-<?php
-//data types
-$name="welcome to course";
-echo "<h1>".$name."</h1>";
-$count = 0;
-$limit=10;
-while($count<$limit){
-    //echo $count."<br/>";
-    if($count%2==0){
-        echo "<b>".$count."<br/>";
-        for ($i=1; $i <= $count; $i++) {
-            echo $i;
-        } 
-        echo "<br/>-------------------<br/>";
-    }
-    $count++;
-}
-/* for ($i=1; $i <= $count; $i++) { 
-    // code...
-    $tableFor=$i;
-    echo "<b>Table for ".$tableFor."</b><br/>";
-    for ($j=1; $j <= $count; $j++) { 
-        echo $tableFor*$j."<br/>";
-    }
-    echo "<hr/>";
-} */
-?>
-            <button onclick="changeText()">Change Text</button>
-            <button onclick="addText()">Add Text</button>
-            <button onclick="hideText()">Hide Text</button>
-            <button onclick="showText()">Show Text</button>
-            <button onclick="changeImg()">Change Image</button>
-            
+
         </div>
-        <div class="container">
+        <div class="container" style="height:2000px;">
             Input 1 <input type="text" id="input1">
             Input 2 
             <input type="text" id="input2"><br/>

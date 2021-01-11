@@ -1,9 +1,26 @@
 <?php
+session_start();
+if(isset($_SESSION['user'])){
+    header("Location: index.php");
+}
 $title="Register";
 include('header.php');
 //print_r($_POST);
 if(isset($_POST['name'])){
-    print_r($_POST);
+    include('inc/connect.php');
+    $sql = "INSERT INTO user (user_name, user_email, user_password)
+    VALUES ('".$_POST['name']."', '".$_POST['email']."', '".$_POST['password']."')";
+
+    if ($conn->query($sql) === TRUE) {
+        echo "User successfully registered";
+    } else {
+        echo "Error: " . $sql . "<br>" . $conn->error;
+    }
+
+    $conn->close();
+
+    //echo addslashes($_POST['name']);
+    //strip_tags
 }
 ?>
     <main>
