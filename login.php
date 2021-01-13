@@ -13,6 +13,7 @@ if(isset($_POST['email'])){
             if($row["user_password"]===$_POST['password']){
                 $_SESSION['user']=$row["user_id"];
                 $_SESSION['user_name']=$row["user_name"];
+                $_SESSION['user_role']=$row["user_role"];
                 header("Location: index.php");
             }else{
                 echo "Password is invalid.";

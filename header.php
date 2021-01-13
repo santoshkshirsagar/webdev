@@ -24,6 +24,7 @@
                 <?php 
                 if(isset($_SESSION['user'])){ 
                     echo "<a href='account.php'>My Account</a>";
+                    echo " | <a href='logout.php'>Logout</a>";
                 }else{
                     ?>
                         <a href="login.php">Login</a> | 
