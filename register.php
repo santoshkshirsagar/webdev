@@ -8,15 +8,21 @@ include('header.php');
 //print_r($_POST);
 if(isset($_POST['name'])){
     include('inc/connect.php');
-    $sql = "INSERT INTO user (user_name, user_email, user_password)
-    VALUES ('".$_POST['name']."', '".$_POST['email']."', '".$_POST['password']."')";
 
-    if ($conn->query($sql) === TRUE) {
-        echo "User successfully registered";
-    } else {
-        echo "Error: " . $sql . "<br>" . $conn->error;
+    $sql = "SELECT * from user WHERE user_email='".$_POST['email']."' LIMIT 1";
+    $result = $conn->query($sql);
+    if($result->num_rows > 0){
+        echo "<div class='container py-5'><div class='alert alert-danger'>User already exist</div></div>";
+    }else{
+        $sql = "INSERT INTO user (user_name, user_email, user_password)
+        VALUES ('".$_POST['name']."', '".$_POST['email']."', '".$_POST['password']."')";
+    
+        if ($conn->query($sql) === TRUE) {
+            echo "<div class='container py-5'><div class='alert alert-success'>User successfully registered</div></div>";
+        } else {
+            echo "Error: " . $sql . "<br>" . $conn->error;
+        }
     }
-
     $conn->close();
 
     //echo addslashes($_POST['name']);

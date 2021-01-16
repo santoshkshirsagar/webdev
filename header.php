@@ -27,8 +27,8 @@
                     echo " | <a href='logout.php'>Logout</a>";
                 }else{
                     ?>
-                        <a href="login.php">Login</a> | 
-                        <a href="register.php">Signup</a>
+                        <a class="btn-top" href="login.php">Login</a>
+                        <a class="btn-top" href="register.php">Signup</a>
                     <?php
                 }
                 ?>

@@ -15,7 +15,10 @@ Cloud: #F3F3F3
 #top{}
 #logo{float: left;color:#932432;text-transform: uppercase;}
 #logo img{height:60px;margin:10px 0px;}
-#toplink{float: right;line-height: 80px;}
+
+#toplink{float: right;line-height: 40px;}
+.btn-top{padding:8px 20px;background-color:#3C1874;color:#fff;display:block;float:right;border-radius:20px;margin:20px 10px ;}
+.btn-top:hover{background-color:#2a1250;}
 
 .container{width:90%;margin:auto;}
 
@@ -36,3 +39,7 @@ Cloud: #F3F3F3
 
 .btn{margin:10px 0px;background-color: #283747;color:#fff;padding:8px 15px;border:0px;}
 .btn:hover{background-color: #49617c; }
+
+.alert{padding:6px;border-radius: 6px;}
+.alert-success{background-color:#83f195;}
+.alert-danger{background-color:#f7a38a;}
