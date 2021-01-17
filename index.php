@@ -5,19 +5,22 @@ include('header.php');
 ?>
 <main>
         <div id="title" >
-            <h1 style="display:block;" id="textTitle" class="text-center">Resume Maker<br/></h1>
+            <h1 style="display:block;" id="textTitle" class="text-center py-4">Resume Maker<br/></h1>
         <!--     <button onclick="changeColor()">Change Color</button> -->
-
         </div>
         <div class="featured">
             <div class="container">
-                <div class="float-left py-5 w-25">
-                    <img id="img" style="width:200px;" src="images/dp.png">
+                <div class="row">
+                    <div class="col-4">
+                        <img id="img" class="w-75" src="images/dp.png">
+                    </div>
+                    <div class="col-8">
+                        <h2>Welcome to Web Dev Course</h2>
+                        <p>HTML, PHP, Javascript etc</p>
+                    </div>
+                    
                 </div>
-                <div class="float-right py-5 w-75">
-                    <h2>Welcome to Web Dev Course</h2>
-                    <p>HTML, PHP, Javascript etc</p>
-                </div>
+            
                 <div class="clear"></div>
             </div>
         </div>

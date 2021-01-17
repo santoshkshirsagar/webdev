@@ -1,4 +1,4 @@
-body{background-color:#F5F2F5;margin:auto;color:#3b3b3b;font-family:tahoma;}
+body{background-color:#F5F2F5;margin:auto;color:#3b3b3b;}
 .clear{clear:both;}
 a{text-decoration: none;cursor: pointer;}
 /* 
@@ -43,3 +43,32 @@ Cloud: #F3F3F3
 .alert{padding:6px;border-radius: 6px;}
 .alert-success{background-color:#83f195;}
 .alert-danger{background-color:#f7a38a;}
+
+
+#featured-img{width:100%;}
+#featured-text{width:100%;}
+
+ /* Extra small devices (phones, 600px and down) */
+ @media only screen and (max-width: 600px) {
+
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+    
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+	#featured-img{width:25%;}
+    #featured-text{width:75%;}
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+    
+} 
