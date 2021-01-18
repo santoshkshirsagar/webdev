@@ -43,7 +43,7 @@ include('header.php');
                     <input class="form-control" type="email" name="email" id="email" required><br/>
                     Password<br/>
                     <input class="form-control" type="password" name="password" id="password" required><br/>
-                    <input class="btn" type="submit" value="Login">
+                    <input class="btn btn-primary" type="submit" value="Login">
                 </form>
             </div>
         </div>
