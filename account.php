@@ -12,7 +12,7 @@ include('header.php');
             $message=array();
             if(isset($_POST['submit'])){
                 $error = false;
-                if($_FILES['image']['size']>50000){
+                if($_FILES['image']['size']>500000){
                     $error=true;
                     $message[] = "File size is greater than 5Mb";
                 }
