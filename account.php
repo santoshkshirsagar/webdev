@@ -40,6 +40,15 @@ include('header.php');
                     $user = $row;
                 }
 
+
+            $sqlP="SELECT user_name as Name,role_name as Role,title as permission_name FROM `user`,role,permission,permission_role WHERE user.role_id=role.id and permission_role.permission_id=permission.id and permission_role.role_id=role.id and user_id='".$_SESSION['user']."'";
+            $resultP = $conn->query($sqlP);
+                // output data of each row
+                $permissions=array();
+                while($row = $resultP->fetch_object()) {
+                    $permissions[]=$row->permission_name;
+                }
+
             $conn->close();
 
             ?>
@@ -67,9 +76,16 @@ include('header.php');
 
                 </div>
                 <div class="col-md-9">
-
                 <a class="btn btn-sm btn-primary float-end ms-2" href="editprofile.php">Edit Profile</a>
             <a class="btn btn-sm btn-info float-end" href="print.php">Print Resume</a>
+            <?php
+            if(in_array('create_resume', $permissions)){
+                echo '<a class="btn btn-sm btn-secondary float-end me-2" href="create.php">Create Resume</a>';
+            }
+            if(in_array('send_message', $permissions)){
+                echo '<a class="btn btn-sm btn-secondary float-end me-2" href="chat.php">Chat</a>';
+            }
+            ?>
                 <table class="table table-striped">
                     <tr>
                         <th colspan="2">Personal Details</th>     
