@@ -7,27 +7,16 @@ include('header.php');
 .blueColor{color:blue;font-size:40px;}
 </style>
 <main>
-        <div id="title" >
-            <h1 style="display:block;" id="textTitle" class="text-center py-4 ">Resume Maker<br/></h1>
-        <!--     <button onclick="changeColor()">Change Color</button> -->
-        </div>
-        <div class="featured">
+      
+        <div class="featured my-5">
             <div class="container">
                 <div class="row">
                     <div class="col-4">
-                        <img id="img" class="w-75" src="images/dp.png">
+                        <img id="img" class="w-75" src="images/undraw_online_cv_qy9w.svg">
                     </div>
                     <div class="col-8">
-                        <h2  id="welcome">Welcome to Web Dev Course</h2>
-                        <div id="divTest" class="classheading" style="width:300px;height:200px;background-color:green;">original text</div>
-                        <button id="btntest">test</button>
-                        <button id="addt">add</button>
-                        <button id="removet">remove</button>
-                        
-                        <button id="csstest">css</button>
-                        <br/>
-                        <input id="inputText" type="text" class="form-control">
-                        <p>HTML, PHP, Javascript etc</p>
+                        <h2  id="welcome">Create Resume Online</h2>
+                        <p>Create your professional resume by adding your information and print using our predefined templates</p>
                     </div>
                     
                 </div>
@@ -75,6 +64,18 @@ include('header.php');
                 $(this).val('asfasdfasdf');
             })
 
+        }
+
+        function firstFunction(callbackfunction){
+            alert('sd');
+            window[callbackfunction](arguments);
+        }
+        function nextfunction(){
+            alert('next ');
+        }
+        
+        function testfunction(){
+            alert('test ');
         }
     </script>
 

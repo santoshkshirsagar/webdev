@@ -1,4 +1,7 @@
-<?php include('inc/constants.php'); ?>
+<?php 
+include('inc/constants.php');
+include('inc/common.php');
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>

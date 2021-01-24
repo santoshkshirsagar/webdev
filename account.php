@@ -92,25 +92,89 @@ include('header.php');
                     </tr>
                     <tr>
                         <td>Name </td>   
-                        <td><?php  echo $user->user_name; ?></td>   
+                        <td><?php  echo $user->fullname; ?></td>   
+                    </tr>
+                    <tr>
+                        <td>Date of Birth</td>   
+                        <td><?php  echo $user->dob; ?></td>   
+                    </tr>
+                    <tr>
+                        <td>Gender</td>   
+                        <td><?php  echo $user->gender; ?></td>   
                     </tr>
                     <tr>
                         <td>Email </td>   
                         <td><?php  echo $user->user_email; ?></td>   
                     </tr>
                     <tr>
+                        <td>State </td>   
+                        <td><?php  echo $user->state_id; ?></td>   
+                    </tr>
+                    <tr>
+                        <td>Country </td>   
+                        <td><?php  echo $user->country_id; ?></td>   
+                    </tr>
+                    <tr>
+                        <td>Languages Known </td>   
+                        <td><?php  echo $user->language; ?></td>   
+                    </tr>
+                    <tr>
                         <th colspan="2">Educational Qualification</th>     
                     </tr>
                     <tr>
-                        <td> </td>   
-                        <td></td>   
+                    <td colspan="2">
+                        <table class="table table-bordered">
+                            <tr>
+                                <th>Qualification</th>   
+                                <th>Year</th>    
+                                <th>Percent</th>   
+                            </tr>
+                    <?php
+                    $edArr = json_decode($user->education);
+                    if(isset($edArr->qualification)){
+                        foreach($edArr->qualification as $key=>$val){
+                            ?>
+                            <tr>
+                                <td><?php echo $edArr->qualification[$key]; ?></td>   
+                                <td><?php echo $edArr->year[$key]; ?></td>    
+                                <td><?php echo $edArr->percent[$key]; ?></td>   
+                            </tr>
+                            <?php
+                        }
+                    }
+                    ?>
+                        </table>
+                    </td>
                     </tr>
                     <tr>
                         <th colspan="2">Work Experience</th>     
                     </tr>
                     <tr>
-                        <td> </td>   
-                        <td></td>   
+                    <td colspan="2">
+                        <table class="table table-bordered">
+                            <tr>
+                                <th>Company</th>   
+                                <th>Year From</th>   
+                                <th>Year To</th>   
+                                <th>Designation</th>   
+                            </tr>
+                    <?php
+                    $expArr = json_decode($user->experience);
+                    if(isset($expArr->company)){
+                        foreach($expArr->company as $key=>$val){
+                            ?>
+                            <tr>
+                                <td><?php echo $expArr->company[$key]; ?></td>   
+                                <td><?php echo $expArr->yearFrom[$key]; ?></td>   
+                                <td><?php echo $expArr->yearTo[$key]; ?></td>   
+                                <td><?php echo $expArr->designation[$key]; ?></td>   
+                            </tr>
+                            <?php
+                        }
+                    }
+                    ?>
+                        </table>
+                    </td>
                     </tr>
                     <tr>
                         <th colspan="2">Other Details</th>     
