@@ -8,14 +8,16 @@ include('header.php');
 //print_r($_POST);
 if(isset($_POST['name'])){
     include('inc/connect.php');
-
+    
     $sql = "SELECT * from user WHERE user_email='".$_POST['email']."' LIMIT 1";
     $result = $conn->query($sql);
     if($result->num_rows > 0){
         echo "<div class='container py-5'><div class='alert alert-danger'>User already exist</div></div>";
     }else{
+
+        $passEnc= password_hash($_POST['password'],  PASSWORD_DEFAULT);
         $sql = "INSERT INTO user (user_name, user_email, user_password)
-        VALUES ('".$_POST['name']."', '".$_POST['email']."', '".$_POST['password']."')";
+        VALUES ('".$_POST['name']."', '".$_POST['email']."', '".$passEnc."')";
     
         if ($conn->query($sql) === TRUE) {
             echo "<div class='container py-5'><div class='alert alert-success'>User successfully registered</div></div>";
@@ -41,7 +43,7 @@ if(isset($_POST['name'])){
                     <input class="form-control" type="email" name="email" id="email" required><br/>
                     Password<br/>
                     <input class="form-control" type="password" name="password" id="password" required><br/>
-                    <input class="btn" type="submit" value="Register">
+                    <input class="btn btn-primary" type="submit" value="Register">
                 </form>
             </div>
         </div>
