@@ -1,9 +1,9 @@
 <footer>
         <div id="footer" class="text-center py-2 muted border-top">
             Copyright 2021 | 
-                    <a class="" href="<?php echo BASEURL; ?>about.php">About</a> | 
+                    <a class="" href="<?php echo BASEURL; ?>about">About</a> | 
                     
-                    <a class="" href="<?php echo BASEURL; ?>contact.php">Contact Us</a>
+                    <a class="" href="<?php echo BASEURL; ?>contact">Contact Us</a>
         </div>
     </footer>
     

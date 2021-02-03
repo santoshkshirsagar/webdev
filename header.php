@@ -59,13 +59,13 @@ include('inc/common.php');
                     <a class="nav-link active" aria-current="page" href="<?php echo BASEURL; ?>">Home</a>
                     </li>
                     <li class="nav-item">
-                    <a class="nav-link" href="<?php echo BASEURL; ?>about.php">About</a>
+                    <a class="nav-link" href="<?php echo BASEURL; ?>about">About</a>
                     </li>
                     <li class="nav-item">
-                    <a class="nav-link" href="<?php echo BASEURL; ?>contact.php">Contact Us</a>
+                    <a class="nav-link" href="<?php echo BASEURL; ?>contact">Contact Us</a>
                     </li>
                     <li class="nav-item">
-                    <a class="nav-link" href="<?php echo BASEURL; ?>services.php">Services</a>
+                    <a class="nav-link" href="<?php echo BASEURL; ?>services">Services</a>
                     </li>
                 </ul>
 
@@ -74,19 +74,19 @@ include('inc/common.php');
                 if(isset($_SESSION['user'])){ 
                     ?>
                     <li class="nav-item">
-                        <a class="nav-link" href="account.php">My Account</a>
+                        <a class="nav-link" href="account">My Account</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="logout.php">Logout</a>
+                        <a class="nav-link" href="logout">Logout</a>
                     </li>
                     <?php
                 }else{
                     ?>
                     <li class="nav-item">
-                        <a class="nav-link" href="login.php">Login</a>
+                        <a class="nav-link" href="login">Login</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="register.php">Signup</a>
+                        <a class="nav-link" href="register">Signup</a>
                     </li>
                     <?php
                 }
